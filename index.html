@@ -1,12 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <!-- Google Material Design tiene su propia colección de iconos y fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
-    <script src="./js/script.js"></script>
+
+<body class="blue-grey darken-4">
+    <div class="container dark-text text-darken-2">
+        <form>
+            <h2 class="center">Formulario</h2>
+
+            <!-- Input de texto con autocompletado -->
+            <div class="input-field col s12">
+                <i class="material-icons prefix">textsms</i>
+                <input type="text" id="autocomplete-input" class="autocomplete">
+                <label for="autocomplete-input">Input con autocompletado</label>
+            </div>
+
+            <!-- Tipos de checkbox -->
+            <p>
+                <label>
+                    <input type="checkbox" />
+                    <span>Sin Marcar</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" checked="checked" />
+                    <span>Marcado</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" class="filled-in" checked="checked" />
+                    <span>Marcado con relleno</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input id="indeterminate-checkbox" type="checkbox" />
+                    <span>Sin determinar</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" checked="checked" disabled="disabled" />
+                    <span>Marcado y deshabilitado</span>
+                </label>
+            </p>
+            <p>
+                <label>
+                    <input type="checkbox" disabled="disabled" />
+                    <span>Deshabilitado</span>
+                </label>
+            </p>
+
+        </form>
+    </div>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.autocomplete');
+            var instances = M.Autocomplete.init(elems, {
+                data: {
+                    "Apple": null,
+                    "Microsoft": null,
+                    "Google": null,
+                    "Android": null,
+                    "Linux": null,
+                    "Windows": null,
+                    "Mac": null,
+                    "Ubuntu": null,
+                    "Debian": null,
+                    "Fedora": null,
+                    "Red Hat": null
+                },
+            });
+        });
+    </script>
 </body>
+
 </html>
