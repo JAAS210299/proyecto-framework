@@ -4,64 +4,290 @@
 <head>
     <!-- Google Material Design tiene su propia colección de iconos y fonts-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body class="blue-grey darken-4">
-    <div class="container dark-text text-darken-2">
+    <div class="container white-text">
         <form>
-            <h2 class="center">Formulario</h2>
+            <h2 class="center">Inputs de formularios</h2>
 
-            <!-- Input de texto con autocompletado -->
-            <div class="input-field col s12">
-                <i class="material-icons prefix">textsms</i>
-                <input type="text" id="autocomplete-input" class="autocomplete">
-                <label for="autocomplete-input">Input con autocompletado</label>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <i class="material-icons prefix">textsms</i>
+                    <input type="text" id="autocomplete-input" class="autocomplete">
+                    <label for="autocomplete-input">Autocompletado</label>
+                </div>
             </div>
 
-            <!-- Tipos de checkbox -->
-            <p>
-                <label>
-                    <input type="checkbox" />
-                    <span>Sin Marcar</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" checked="checked" />
-                    <span>Marcado</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" class="filled-in" checked="checked" />
-                    <span>Marcado con relleno</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input id="indeterminate-checkbox" type="checkbox" />
-                    <span>Sin determinar</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" checked="checked" disabled="disabled" />
-                    <span>Marcado y deshabilitado</span>
-                </label>
-            </p>
-            <p>
-                <label>
-                    <input type="checkbox" disabled="disabled" />
-                    <span>Deshabilitado</span>
-                </label>
-            </p>
+            <h4 class="center">Checkbox</h4>
+            <div class="row">
+                <div class="input-field col offset-s5">
+                    <p>
+                        <label>
+                            <input type="checkbox" />
+                            <span>Sin Marcar</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" checked="checked" />
+                            <span>Marcado</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" class="filled-in" checked="checked" />
+                            <span>Marcado con relleno</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="indeterminate-checkbox"> <!-- No funciona -->
+                            <input type="checkbox" class="indeterminate-checkbox" id="indeterminate-checkbox" />
+                            <span>Sin determinar</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" checked="checked" disabled="disabled" />
+                            <span>Marcado y deshabilitado</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" disabled="disabled" />
+                            <span>Deshabilitado</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
 
+            <h4 class="center">Chips</h4>
+            <div class="row center">
+                <div class="chip">
+                    <img src="img/a.jpg" alt="Contact Person">
+                    Ana
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                    <img src="img/b.jpg" alt="Contact Person">
+                    Laura
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                    <img src="img/c.jpg" alt="Contact Person">
+                    Juan
+                    <i class="close material-icons">close</i>
+                </div>
+                <div class="chip">
+                    <img src="img/d.jpg" alt="Contact Person">
+                    Pedro
+                    <i class="close material-icons">close</i>
+                </div>
+            </div>
+
+            <h4 class="center">Selector de fecha</h4>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <i class="tiny material-icons prefix">date_range</i>
+                    <input type="text" class="datepicker">
+                </div>
+            </div>
+
+            <h4 class="center">Selector de hora</h4>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <i class="material-icons prefix">access_time</i>
+                    <input type="text" class="timepicker">
+                </div>
+            </div>
+
+            <h4 class="center">Radio</h4>
+            <div class="row">
+                <div class="input-field col offset-s5">
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" />
+                            <span>Rojo</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group1" type="radio" checked="checked" />
+                            <span>Verde</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group2" class="with-gap" type="radio" checked="checked" />
+                            <span>Azul</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input name="group2" type="radio" disabled="disabled" />
+                            <span>Deshabilitado</span>
+                        </label>
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="center">Range</h4>
+            <div class="row">
+                <div class="input-field col s6 offset-s3">
+                    <p class="range-field">
+                        <input type="range" id="test5" min="0" max="100" />
+                    </p>
+                </div>
+            </div>
+
+            <h4 class="center">Switch</h4>
+            <div class="row center">
+                <div class="switch">
+                    <label>
+                        Off
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+                <p></p>
+                <div class="switch">
+                    <label>
+                        Off
+                        <input disabled type="checkbox">
+                        <span class="lever"></span>
+                        On
+                    </label>
+                </div>
+            </div>
+
+            <h4 class="center">Entradas de texto y archivos</h4>
+            <div class="row">
+                <div class="input-field col s3 inline">
+                    <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                    <label for="first_name">Nombre</label>
+                </div>
+                <div class="input-field col s3 inline">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Apellido</label>
+                </div>
+                <div class="input-field col s3 inline">
+                    <input id="password" type="password" class="validate">
+                    <label for="password">Contraseña</label>
+                </div>
+                <div class="input-field col s3 inline">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                    <span class="helper-text white-text" data-error="Prueba de nuevo"
+                        data-success="Sintaxis correcta">Texto de ayuda</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Textarea</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="input-field col s6">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </form>
+
+        <div class="divider"></div>
+
+        <h2 class="center">Cards</h2>
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Titulo</span>
+                        <p>Este es el cuerpo de la carta donde estará su contenido principal.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s3">
+                <div class="card text-darken-4">
+                    <div class="card-image">
+                        <img src="img/iguana.jpg">
+                        <span class="card-title black-text">Titulo</span>
+                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                                class="material-icons">add</i></a>
+                    </div>
+                    <div class="card-content">
+                        <p class="black-text">
+                            Soy una card. Tengo una imagen y un botón flotante.
+                            Además, tengo un título y un texto de contenido.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="center">Carrusel</h2>
+        <div class="row">
+            <div class="carousel col s6 offset-s3">
+                <a class="carousel-item"><img src="img/1.webp"></a>
+                <a class="carousel-item"><img src="img/2.jpg"></a>
+                <a class="carousel-item"><img src="img/3.webp"></a>
+                <a class="carousel-item"><img src="img/4.jpg"></a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <h2 class="center">Tooltips</h2>
+        <div class="row center">
+            <div class="col s3"><a class="btn tooltipped" data-position="bottom" data-tooltip="Soy un tooltip">Abajo</a>
+            </div>
+            <div class="col s3"><a class="btn tooltipped" data-position="top" data-tooltip="Soy un tooltip">Arriba</a>
+            </div>
+            <div class="col s3"><a class="btn tooltipped" data-position="left"
+                    data-tooltip="Soy un tooltip">Izquierda</a>
+            </div>
+            <div class="col s3"><a class="btn tooltipped" data-position="right"
+                    data-tooltip="Soy un tooltip">Derecha</a>
+            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Scripts de Materialize -->
+    <script type="text/javascript" src="js/materialize.js"></script>
     <script type="text/javascript">
+
+        //Autocompletado
         document.addEventListener('DOMContentLoaded', function () {
             var elems = document.querySelectorAll('.autocomplete');
             var instances = M.Autocomplete.init(elems, {
@@ -80,6 +306,34 @@
                 },
             });
         });
+
+        //Datepicker
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {});
+        });
+
+        //Timepicker
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.timepicker');
+            var instances = M.Timepicker.init(elems, {});
+        });
+
+        //Carrusel
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                indicators: true
+            });
+        });
+
+
+        //Inicialización de los tooltips
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.tooltipped');
+            var instances = M.Tooltip.init(elems);
+        });
+
     </script>
 </body>
 
