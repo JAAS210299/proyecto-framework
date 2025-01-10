@@ -17,3 +17,12 @@ Se puede usar a través de la descarga de los archivos _CSS_ y _JS_, si se prefi
 
 ## Carruseles, cards, ventanas, tooltips
 
+
+Materialize es un framework frontend basado en Material Design, el sistema de diseño de Google, que se centra en ofrecer interfaces modernas, consistentes y responsivas. Sus características principales incluyen:
+
+Diseño predeterminado: Componentes como botones flotantes, tarjetas y modales preconfigurados para seguir las pautas de Material Design.
+Jerarquía visual y profundidad: Uso de sombras, colores y tipografía para destacar elementos y organizar información.
+Animaciones funcionales: Transiciones suaves para mejorar la experiencia del usuario.
+Sistema de grid responsivo: Basado en Flexbox para diseños adaptativos.
+Dependencia de jQuery: Utilizado para funcionalidades dinámicas como dropdowns y modales.
+Ideal para proyectos que buscan rapidez y coherencia con el estilo de Google, aunque con menos flexibilidad que frameworks como Tailwind CSS.
